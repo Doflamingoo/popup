@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layer.css">
+    <script src="../../jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.layer.js"></script>
+    <style>
+        ul li {
+            padding: 20px;
+        }
+        
+        .div1 {
+            overflow: auto;
+        }
+        
+        .close {
+            display: block;
+            width: 60px;
+            height: 30px;
+            background: #ffffff;
+            cursor: pointer;
+            color: #000000;
+            line-height: 30px;
+            font-size: 16px;
+            text-align: center;
+            border: 1px solid red;
+            float: right;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" class="layer-btn">点击弹窗</button>
+    <div class="layer-wrap div1" style="width:500px;height:500px;background:#6d6060;display:none;">
+        <span class="close-btn close">关闭</span>
+        <ul style="font-size:20px;color:white">
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1111</li>
+        </ul>
+    </div>
+    <div class="layer-mask"></div>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+
+            })
+        })
+        $("body").layer({
+            layerBtn: ".layer-btn",
+            /*按钮类名*/
+            layerWrap: ".layer-wrap",
+            /*弹出层类名*/
+            layerClose: ".close-btn",
+            /*关闭按钮类名*/
+            action: "slideDown",
+            /*显示方式 有fade slideDown show 三种方式*/
+            delayTime: 500,
+            /*多久显示*/
+            maskHide: false /*是否隐藏遮罩层*/
+        });
+    </script>
+</body>
+
+</html>
